@@ -26,7 +26,7 @@ jobs:
 
       - name: Build executable
         run: |
-          pyinstaller --onefile --windowed --name "WebP-Smart-Converter" --collect-all tkinterdnd2 webp_smart_converter.py
+          pyinstaller --onefile --windowed --name "WebP-Smart-Converter" --collect-all tkinterdnd2 --collect-all pillow_heif webp_smart_converter.py
 
       - name: Upload to release
         uses: softprops/action-gh-release@v2
